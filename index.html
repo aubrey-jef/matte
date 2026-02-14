@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matematikk 2026</title>
+<title>Tresemesterordning — Matematikk repetisjon</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -133,18 +134,51 @@
     border: 1px solid var(--border);
     border-left: 3px solid var(--accent);
     padding: 24px 28px;
-    margin: 40px 0;
-    font-size: 15px;
+    margin: 40px 0 24px;
+    font-size: 14px;
     color: var(--muted);
     line-height: 1.8;
   }
 
   .intro-box strong { color: var(--ink); font-weight: 500; }
 
+  .nav-guide {
+    background: var(--campus-light);
+    border: 1px solid #C5D8EA;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--campus);
+  }
+
+  .nav-guide strong { font-weight: 500; }
+  .nav-guide .nav-path {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    background: rgba(26, 82, 118, 0.08);
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+
+  .skip-box {
+    background: #FDF6EC;
+    border: 1px solid #E8D5B5;
+    border-left: 3px solid var(--phase2);
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #7D5A2A;
+    line-height: 1.7;
+  }
+
+  .skip-box strong { font-weight: 500; }
+
   .rhythm-box {
     background: var(--paper);
     border: 1px solid var(--border);
     padding: 20px 24px;
+    margin-top: 40px;
     margin-bottom: 40px;
     display: flex;
     gap: 0;
@@ -232,22 +266,9 @@
   .phase-desc {
     font-size: 14px;
     color: var(--muted);
-    margin: 10px 0 20px;
+    margin: 10px 0 16px;
     line-height: 1.7;
   }
-
-  .phase-nav {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    background: var(--paper);
-    border: 1px solid var(--border);
-    padding: 10px 16px;
-    margin-bottom: 16px;
-    line-height: 1.8;
-  }
-
-  .phase-nav strong { color: var(--ink); font-weight: 500; }
 
   .week {
     background: var(--paper);
@@ -313,6 +334,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
   }
 
   .platform-badge {
@@ -322,12 +344,13 @@
     padding: 3px 10px;
     border-radius: 2px;
     letter-spacing: 0.05em;
+    flex-shrink: 0;
   }
 
   .badge-campus { background: var(--campus-light); color: var(--campus); }
   .badge-khan { background: var(--khan-light); color: var(--khan); }
 
-  .platform-nav {
+  .platform-where {
     font-size: 12px;
     color: var(--muted);
     font-family: 'DM Mono', monospace;
@@ -372,9 +395,12 @@
     font-weight: bold;
   }
 
-  .checklist li.done span {
-    text-decoration: line-through;
-    color: var(--muted);
+  .checklist li.done span { text-decoration: line-through; color: var(--muted); }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 16px 0;
   }
 
   .tip-box {
@@ -397,12 +423,6 @@
     font-size: 13px;
     color: var(--accent);
     line-height: 1.6;
-  }
-
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 16px 0;
   }
 
   .final-note {
@@ -435,7 +455,7 @@
     <div class="header-label">Selvstudium · Februar–Juni 2025</div>
     <h1>Tresemesterordning<br><em>Matematikk repetisjon</em></h1>
     <div class="header-meta">
-      <span>18 uker · 5–7 timer/uke</span>
+      <span>20 uker · 5–7 timer/uke</span>
     </div>
     <div class="platform-legend">
       <div class="legend-item"><div class="legend-dot" style="background:var(--campus)"></div> Campus Inkrement</div>
@@ -450,9 +470,6 @@
 
 <main>
 
-<div class="intro-box">
-  <strong>Målet er ikke å mestre R-matte.</strong> Målet er å gjenopprette din matematiske intuisjon slik at du kan følge med når tresemesterordningen starter. Du skal ikke frykte ligninger – du skal gjenkjenne dem. Én time daglig på hverdager er nok til at dette er gjennomførbart.
-</div>
 
 <div class="rhythm-box">
   <h3>Ukentlig rytme — alle faser</h3>
@@ -467,21 +484,15 @@
 <div class="phase">
   <div class="phase-header">
     <div class="phase-number" style="background: var(--phase1)">Fase 1</div>
-    <div class="phase-title">Grunnmur — Aritmetikk og algebra</div>
+    <div class="phase-title">1P — Grunnmur og hull-tetting</div>
     <div class="phase-dates">Uke 1–4 · Feb–Mars</div>
   </div>
-  <div class="phase-desc">Start her uansett hva. Hull i grunnleggende tallforståelse saboterer alt som kommer etterpå. Ikke hast deg videre før dette sitter.</div>
+  <div class="phase-desc">Du har sett dette før, men husker det ikke godt nok. Fire uker er nok til å få det på plass igjen. Gå raskt gjennom det som sitter, bruk tid der det ikke sitter.</div>
 
-  <div class="phase-nav">
-    <strong>Campus:</strong> Ungdomsskole → 9.–10. trinn → Algebra &nbsp;·&nbsp;
-    <strong>Khan:</strong> Arithmetic → Pre-algebra → Algebra basics
-  </div>
-
-  <!-- Uke 1 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 1</div>
-      <div class="week-title">Regnerekkefølge, brøk og desimaltall</div>
+      <div class="week-title">Regnerekkefølge, brøk og negative tall</div>
       <div class="week-progress" id="prog-w1">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -490,13 +501,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">9.–10. trinn → Regneregler og brøk</div>
+          <div class="platform-where">1P → Kapittel om tall og regneregler</div>
         </div>
         <ul class="checklist" id="list-w1">
-          <li><input type="checkbox" data-week="w1"> <span>Regnerekkefølge: parentes, potens, multiplikasjon/divisjon, addisjon/subtraksjon (PEMDAS)</span></li>
+          <li><input type="checkbox" data-week="w1"> <span>Regnerekkefølge: parentes → potens → gang/del → pluss/minus</span></li>
           <li><input type="checkbox" data-week="w1"> <span>Addisjon og subtraksjon av brøk med ulike nevnere</span></li>
           <li><input type="checkbox" data-week="w1"> <span>Multiplikasjon og divisjon av brøk</span></li>
-          <li><input type="checkbox" data-week="w1"> <span>Omgjøring mellom blandet tall og uekte brøk</span></li>
+          <li><input type="checkbox" data-week="w1"> <span>Omgjøring mellom brøk, desimaltall og prosent</span></li>
+          <li><input type="checkbox" data-week="w1"> <span>Regning med negative tall (alle fire operasjoner)</span></li>
         </ul>
       </div>
 
@@ -505,25 +517,24 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Arithmetic → Fractions</div>
+          <div class="platform-where">Arithmetic → Fractions + Pre-algebra → Negative numbers</div>
         </div>
         <ul class="checklist" id="list-w1b">
-          <li><input type="checkbox" data-week="w1"> <span>Order of operations (søk "order of operations" i Khan)</span></li>
+          <li><input type="checkbox" data-week="w1"> <span>Order of operations (søk "order of operations")</span></li>
           <li><input type="checkbox" data-week="w1"> <span>Adding and subtracting fractions</span></li>
           <li><input type="checkbox" data-week="w1"> <span>Multiplying and dividing fractions</span></li>
-          <li><input type="checkbox" data-week="w1"> <span>Converting between fractions, decimals, and percents</span></li>
+          <li><input type="checkbox" data-week="w1"> <span>Negative numbers: all four operations</span></li>
         </ul>
       </div>
 
-      <div class="tip-box"><strong>Viktig:</strong> Regnerekkefølge er den vanligste kilden til feil i ingeniørmatematikk på alle nivåer. Ikke gå videre før du kan løse sammensatte uttrykk uten å tenke deg om.</div>
+      <div class="tip-box"><strong>Viktigst denne uken:</strong> Regnerekkefølge. Det er den stilleteste kilden til feil i alt du gjør fremover. Løs minst 20 blandede uttrykk for hånd uten kalkulator før du går videre.</div>
     </div>
   </div>
 
-  <!-- Uke 2 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 2</div>
-      <div class="week-title">Prosentregning, negative tall og potenser</div>
+      <div class="week-title">Potenser og algebra: uttrykk og forenkling</div>
       <div class="week-progress" id="prog-w2">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -532,13 +543,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">9.–10. trinn → Tall og regning</div>
+          <div class="platform-where">1P → Algebra → Potenser og uttrykk</div>
         </div>
         <ul class="checklist" id="list-w2">
-          <li><input type="checkbox" data-week="w2"> <span>Prosentregning: finne prosent av tall, finne hele fra del</span></li>
-          <li><input type="checkbox" data-week="w2"> <span>Prosentvis endring (økning og nedgang)</span></li>
-          <li><input type="checkbox" data-week="w2"> <span>Regning med negative tall (alle fire operasjoner)</span></li>
-          <li><input type="checkbox" data-week="w2"> <span>Potenser: grunnleggende regler (a^m · a^n, a^0, negativt eksponent)</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Potensregler: a^m · a^n = a^(m+n), (a^m)^n, a^0 = 1</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Kvadratrøtter og forholdet til potenser</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Variabler og algebraiske uttrykk: sammentrekke like ledd</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Distributivloven: a(b + c) = ab + ac</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Minus foran parentes: –(a + b) = –a – b</span></li>
         </ul>
       </div>
 
@@ -547,23 +559,24 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Pre-algebra → Negative numbers + Exponents</div>
+          <div class="platform-where">Pre-algebra → Exponents + Algebra basics → Expressions</div>
         </div>
         <ul class="checklist" id="list-w2b">
-          <li><input type="checkbox" data-week="w2"> <span>Negative numbers: all operations</span></li>
           <li><input type="checkbox" data-week="w2"> <span>Exponent rules: product rule, power rule, zero exponent</span></li>
-          <li><input type="checkbox" data-week="w2"> <span>Square roots and cube roots</span></li>
-          <li><input type="checkbox" data-week="w2"> <span>Scientific notation</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Square roots and their relationship to exponents</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>Combining like terms</span></li>
+          <li><input type="checkbox" data-week="w2"> <span>The distributive property</span></li>
         </ul>
       </div>
+
+      <div class="tip-box"><strong>Lær potensreglene utenat.</strong> Du vil bruke dem ukentlig gjennom hele ingeniørstudiet.</div>
     </div>
   </div>
 
-  <!-- Uke 3 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 3</div>
-      <div class="week-title">Algebra: uttrykk og forenkling</div>
+      <div class="week-title">Lineære ligninger og prosentregning</div>
       <div class="week-progress" id="prog-w3">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -572,14 +585,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">9.–10. trinn → Algebra → Uttrykk</div>
+          <div class="platform-where">1P → Algebra → Likninger</div>
         </div>
         <ul class="checklist" id="list-w3">
-          <li><input type="checkbox" data-week="w3"> <span>Variabler og algebraiske uttrykk</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>Sammentrekning av like ledd</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>Distributivloven: a(b + c) = ab + ac</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>Uttrykk med parentes (inkludert minus foran parentes)</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>Faktorisering av enkle uttrykk</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Løse lineære ligninger: ax + b = c, inkl. med parentes og brøk</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Sette opp og løse likninger fra tekstoppgaver</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Prosentregning: finne prosent av tall, finne hele fra del</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Prosentvis endring (økning og nedgang) — brukes i ingeniøroppgaver</span></li>
         </ul>
       </div>
 
@@ -588,23 +600,22 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Algebra basics → Variables & expressions</div>
+          <div class="platform-where">Algebra basics → Equations</div>
         </div>
         <ul class="checklist" id="list-w3b">
-          <li><input type="checkbox" data-week="w3"> <span>Combining like terms</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>The distributive property</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>Factoring with the distributive property</span></li>
-          <li><input type="checkbox" data-week="w3"> <span>Substituting values into expressions</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>One-step and two-step equations</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Multi-step equations with fractions and parentheses</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Percentages: find percent of a number, find the whole</span></li>
+          <li><input type="checkbox" data-week="w3"> <span>Percent change</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 4 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 4</div>
-      <div class="week-title">Lineære ligninger og ulikheter</div>
+      <div class="week-title">Lineære funksjoner og grafforståelse</div>
       <div class="week-progress" id="prog-w4">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -613,13 +624,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">9.–10. trinn → Algebra → Likninger</div>
+          <div class="platform-where">1P → Funksjoner → Lineære funksjoner</div>
         </div>
         <ul class="checklist" id="list-w4">
-          <li><input type="checkbox" data-week="w4"> <span>Løse lineære ligninger: ax + b = c</span></li>
-          <li><input type="checkbox" data-week="w4"> <span>Ligninger med parentes og brøk</span></li>
-          <li><input type="checkbox" data-week="w4"> <span>Sette opp og løse likninger fra tekstoppgaver</span></li>
-          <li><input type="checkbox" data-week="w4"> <span>Ulikheter og tallinje-representasjon</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Koordinatsystemet: plotte punkter og lese av grafer</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Lineære funksjoner: y = ax + b — hva betyr a og b?</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Stigningstall: beregne og tolke</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Tegne lineære funksjoner for hånd</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Finne likning til en rett linje gitt to punkter</span></li>
         </ul>
       </div>
 
@@ -628,17 +640,17 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Algebra basics → Equations & inequalities</div>
+          <div class="platform-where">Algebra I → Linear functions</div>
         </div>
         <ul class="checklist" id="list-w4b">
-          <li><input type="checkbox" data-week="w4"> <span>One-step and two-step equations</span></li>
-          <li><input type="checkbox" data-week="w4"> <span>Multi-step equations with fractions</span></li>
-          <li><input type="checkbox" data-week="w4"> <span>Inequalities: solve and graph on number line</span></li>
-          <li><input type="checkbox" data-week="w4"> <span>Word problems with linear equations</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Slope and y-intercept: meaning and calculation</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Graphing linear equations</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Writing equation of a line from two points</span></li>
+          <li><input type="checkbox" data-week="w4"> <span>Slope as rate of change</span></li>
         </ul>
       </div>
 
-      <div class="milestone-box"><strong>Milepæl:</strong> Du skal nå klare å løse 3(x – 4) = 12 og 2x + 5 = 13 uten å nøle. Ta Khan Academys mastery-test for Algebra basics før du går videre.</div>
+      <div class="milestone-box"><strong>Milepæl — 1P:</strong> Du skal nå klare å løse 3(x – 4) = 12 uten å nøle, og forstå hva stigningstallet til en lineær funksjon forteller deg. Ta Campus sin kapittelprøve for disse temaene.</div>
     </div>
   </div>
 </div>
@@ -647,21 +659,15 @@
 <div class="phase">
   <div class="phase-header">
     <div class="phase-number" style="background: var(--phase2)">Fase 2</div>
-    <div class="phase-title">1T-nivå — Funksjoner og grafforståelse</div>
-    <div class="phase-dates">Uke 5–10 · Mars–Mai</div>
+    <div class="phase-title">1T — Funksjoner, trigonometri og logaritmer</div>
+    <div class="phase-dates">Uke 5–12 · Mars–Mai</div>
   </div>
-  <div class="phase-desc">Funksjoner er språket matematikken bruker for å beskrive sammenhenger. Her beveger du deg inn i videregående-pensumet og begynner å se matematikken som et verktøy.</div>
+  <div class="phase-desc">Dette er hjertet av planen. 1T er der du virkelig bygger det grunnlaget R1 krever. Bruk god tid her – det er verdt det.</div>
 
-  <div class="phase-nav">
-    <strong>Campus:</strong> Videregående → 1T &nbsp;·&nbsp;
-    <strong>Khan:</strong> Algebra I → Algebra II → Trigonometry (intro)
-  </div>
-
-  <!-- Uke 5 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 5</div>
-      <div class="week-title">Koordinatsystemet og lineære funksjoner</div>
+      <div class="week-title">Likningssystemer</div>
       <div class="week-progress" id="prog-w5">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -670,13 +676,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">1T → Funksjoner → Lineære funksjoner</div>
+          <div class="platform-where">1T → Algebra → Likningssystemer</div>
         </div>
         <ul class="checklist" id="list-w5">
-          <li><input type="checkbox" data-week="w5"> <span>Koordinatsystemet: plotte punkter og lese av grafer</span></li>
-          <li><input type="checkbox" data-week="w5"> <span>Funksjonsnotasjon: f(x), definisjonsmengde og verdimengde</span></li>
-          <li><input type="checkbox" data-week="w5"> <span>Lineære funksjoner: y = ax + b, stigningstall og konstantledd</span></li>
-          <li><input type="checkbox" data-week="w5"> <span>Tegne lineære funksjoner for hånd</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Løse to ligninger med to ukjente: innsettingsmetoden</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Løse to ligninger med to ukjente: addisjonsmetoden</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Grafisk løsning: skjæringspunkt som løsning</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Tekstoppgaver som krever to ligninger</span></li>
         </ul>
       </div>
 
@@ -685,23 +691,21 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Algebra I → Linear functions</div>
+          <div class="platform-where">Algebra I → Systems of equations</div>
         </div>
         <ul class="checklist" id="list-w5b">
-          <li><input type="checkbox" data-week="w5"> <span>Slope and y-intercept</span></li>
-          <li><input type="checkbox" data-week="w5"> <span>Graphing linear equations</span></li>
-          <li><input type="checkbox" data-week="w5"> <span>Writing equations of lines</span></li>
-          <li><input type="checkbox" data-week="w5"> <span>Interpreting slope as rate of change</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Substitution method</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Elimination method</span></li>
+          <li><input type="checkbox" data-week="w5"> <span>Word problems with systems of equations</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 6 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 6</div>
-      <div class="week-title">Likningssystemer</div>
+      <div class="week-title">Andregradsfunksjoner og abc-formelen</div>
       <div class="week-progress" id="prog-w6">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -710,12 +714,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">1T → Algebra → Likningssystemer</div>
+          <div class="platform-where">1T → Funksjoner → Andregradsfunksjoner</div>
         </div>
         <ul class="checklist" id="list-w6">
-          <li><input type="checkbox" data-week="w6"> <span>Løse to ligninger med to ukjente (innsettingsmetoden)</span></li>
-          <li><input type="checkbox" data-week="w6"> <span>Løse to ligninger med to ukjente (addisjonsmetoden)</span></li>
-          <li><input type="checkbox" data-week="w6"> <span>Grafisk løsning av likningssystemer</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Andregradsfunksjoner: f(x) = ax² + bx + c og grafens form</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Toppunkt og symmetriakse</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>abc-formelen: løse andregradsligninger</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Diskriminanten: antall løsninger</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Faktorisering av andregradsuttrykk</span></li>
         </ul>
       </div>
 
@@ -724,23 +730,24 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Algebra I → Systems of equations</div>
+          <div class="platform-where">Algebra I → Quadratic equations and functions</div>
         </div>
         <ul class="checklist" id="list-w6b">
-          <li><input type="checkbox" data-week="w6"> <span>Solving systems by substitution</span></li>
-          <li><input type="checkbox" data-week="w6"> <span>Solving systems by elimination</span></li>
-          <li><input type="checkbox" data-week="w6"> <span>Graphing systems of equations</span></li>
-          <li><input type="checkbox" data-week="w6"> <span>Word problems with systems of equations</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Graphing quadratic functions: vertex and axis of symmetry</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Solving with the quadratic formula</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>The discriminant</span></li>
+          <li><input type="checkbox" data-week="w6"> <span>Factoring quadratic expressions</span></li>
         </ul>
       </div>
+
+      <div class="tip-box"><strong>abc-formelen:</strong> Lær den utenat. x = (–b ± √(b²–4ac)) / 2a. Du vil bruke den gjennom hele ingeniørstudiet.</div>
     </div>
   </div>
 
-  <!-- Uke 7 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 7</div>
-      <div class="week-title">Andregradsfunksjoner og abc-formelen</div>
+      <div class="week-title">Eksponentialfunksjoner</div>
       <div class="week-progress" id="prog-w7">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -749,13 +756,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">1T → Funksjoner → Andregradsfunksjoner</div>
+          <div class="platform-where">1T → Funksjoner → Eksponentialfunksjoner</div>
         </div>
         <ul class="checklist" id="list-w7">
-          <li><input type="checkbox" data-week="w7"> <span>Andregradsfunksjoner: f(x) = ax² + bx + c</span></li>
-          <li><input type="checkbox" data-week="w7"> <span>Parabelens toppunkt og symmetriakse</span></li>
-          <li><input type="checkbox" data-week="w7"> <span>Løse andregradsligninger med abc-formelen</span></li>
-          <li><input type="checkbox" data-week="w7"> <span>Diskriminanten: bestemme antall løsninger</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Eksponentialfunksjoner: f(x) = a · b^x</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Eksponentiell vekst og nedgang — tolke parameterne a og b</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Grafens form og oppførsel</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Naturlig eksponentialfunksjon e^x — introduksjon til konseptet</span></li>
         </ul>
       </div>
 
@@ -764,23 +771,21 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Algebra I → Quadratic equations</div>
+          <div class="platform-where">Algebra II → Exponential functions</div>
         </div>
         <ul class="checklist" id="list-w7b">
-          <li><input type="checkbox" data-week="w7"> <span>Graphing quadratic functions</span></li>
-          <li><input type="checkbox" data-week="w7"> <span>Solving quadratic equations: factoring and quadratic formula</span></li>
-          <li><input type="checkbox" data-week="w7"> <span>The discriminant</span></li>
-          <li><input type="checkbox" data-week="w7"> <span>Vertex form of a quadratic</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Exponential growth and decay</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Interpreting a and b in f(x) = a·b^x</span></li>
+          <li><input type="checkbox" data-week="w7"> <span>Introduction to the number e</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 8 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 8</div>
-      <div class="week-title">Eksponential- og logaritmefunksjoner</div>
+      <div class="week-title">Logaritmer</div>
       <div class="week-progress" id="prog-w8">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -789,13 +794,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">1T → Funksjoner → Eksponential og logaritme</div>
+          <div class="platform-where">1T → Funksjoner → Logaritmer</div>
         </div>
         <ul class="checklist" id="list-w8">
-          <li><input type="checkbox" data-week="w8"> <span>Eksponentialfunksjoner: f(x) = a · b^x, vekst og nedgang</span></li>
-          <li><input type="checkbox" data-week="w8"> <span>Hva er en logaritme? Sammenhengen mellom log og potens</span></li>
-          <li><input type="checkbox" data-week="w8"> <span>Regneregler for logaritmer: log(ab), log(a/b), log(a^n)</span></li>
-          <li><input type="checkbox" data-week="w8"> <span>Løse ligninger med logaritmer</span></li>
+          <li><input type="checkbox" data-week="w8"> <span>Hva er en logaritme? log_a(x) = y ↔ a^y = x</span></li>
+          <li><input type="checkbox" data-week="w8"> <span>Regneregler: log(ab), log(a/b), log(a^n)</span></li>
+          <li><input type="checkbox" data-week="w8"> <span>Naturlig logaritme: ln(x) = log_e(x)</span></li>
+          <li><input type="checkbox" data-week="w8"> <span>Løse eksponentialligninger med logaritmer</span></li>
         </ul>
       </div>
 
@@ -804,23 +809,22 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Algebra II → Exponential & logarithmic functions</div>
+          <div class="platform-where">Algebra II → Logarithms</div>
         </div>
         <ul class="checklist" id="list-w8b">
-          <li><input type="checkbox" data-week="w8"> <span>Exponential growth and decay</span></li>
           <li><input type="checkbox" data-week="w8"> <span>Introduction to logarithms</span></li>
           <li><input type="checkbox" data-week="w8"> <span>Properties of logarithms</span></li>
-          <li><input type="checkbox" data-week="w8"> <span>Natural logarithm: ln(x)</span></li>
+          <li><input type="checkbox" data-week="w8"> <span>The natural logarithm ln(x)</span></li>
+          <li><input type="checkbox" data-week="w8"> <span>Solving exponential equations with logarithms</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 9 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 9</div>
-      <div class="week-title">Geometri og pytagoras</div>
+      <div class="week-title">Geometri — det du trenger for trigonometri</div>
       <div class="week-progress" id="prog-w9">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -829,13 +833,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">1T → Geometri</div>
+          <div class="platform-where">1T → Geometri</div>
         </div>
         <ul class="checklist" id="list-w9">
-          <li><input type="checkbox" data-week="w9"> <span>Areal og omkrets: trekant, rektangel, sirkel, trapes</span></li>
-          <li><input type="checkbox" data-week="w9"> <span>Volum og overflate: sylinder, kule, kjegle</span></li>
-          <li><input type="checkbox" data-week="w9"> <span>Pytagoras' setning og bruksområder</span></li>
-          <li><input type="checkbox" data-week="w9"> <span>Avstand mellom to punkter i koordinatsystemet</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Pytagoras' setning: a² + b² = c²</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Areal av trekant, rektangel og sirkel — trenger dette for trigonometri</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Vinkler i trekanter: vinkelsum, ytre vinkel</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Likesidede og likebeinte trekanter: egenskaper</span></li>
         </ul>
       </div>
 
@@ -844,19 +848,19 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Geometry → Pythagorean theorem + Area/Volume</div>
+          <div class="platform-where">Geometry → Pythagorean theorem + Triangles</div>
         </div>
         <ul class="checklist" id="list-w9b">
-          <li><input type="checkbox" data-week="w9"> <span>Pythagorean theorem: find missing side</span></li>
-          <li><input type="checkbox" data-week="w9"> <span>Distance formula</span></li>
-          <li><input type="checkbox" data-week="w9"> <span>Area of triangles, circles, trapezoids</span></li>
-          <li><input type="checkbox" data-week="w9"> <span>Volume of cylinders, cones, spheres</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Pythagorean theorem: find missing sides</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Triangle angles: sum and exterior angle</span></li>
+          <li><input type="checkbox" data-week="w9"> <span>Area of triangles and circles</span></li>
         </ul>
       </div>
+
+      <div class="tip-box"><strong>Ikke bruk mer enn én uke på geometri.</strong> Du trenger det som grunnlag for trigonometri, ikke som eget mål. Avansert geometri (volum, 3D) er ikke prioritert for R-matte.</div>
     </div>
   </div>
 
-  <!-- Uke 10 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 10</div>
@@ -869,13 +873,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">1T → Trigonometri</div>
+          <div class="platform-where">1T → Trigonometri → Grunnleggende trig</div>
         </div>
         <ul class="checklist" id="list-w10">
-          <li><input type="checkbox" data-week="w10"> <span>Definisjoner: sin, cos, tan i rettvinklet trekant</span></li>
-          <li><input type="checkbox" data-week="w10"> <span>Finne ukjente sider og vinkler</span></li>
-          <li><input type="checkbox" data-week="w10"> <span>Sinussetningen og cosinussetningen</span></li>
-          <li><input type="checkbox" data-week="w10"> <span>Areal av trekant med vinkel: T = ½ab sin C</span></li>
+          <li><input type="checkbox" data-week="w10"> <span>Definisjoner i rettvinklet trekant: sin = motstående/hypotenuse osv.</span></li>
+          <li><input type="checkbox" data-week="w10"> <span>SOH-CAH-TOA: husk dette som et system</span></li>
+          <li><input type="checkbox" data-week="w10"> <span>Finne ukjente sider og vinkler i rettvinklede trekanter</span></li>
+          <li><input type="checkbox" data-week="w10"> <span>Viktige vinkler utenat: sin/cos/tan for 0°, 30°, 45°, 60°, 90°</span></li>
         </ul>
       </div>
 
@@ -884,40 +888,21 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Trigonometry → Right triangles & trig ratios</div>
+          <div class="platform-where">Trigonometry → Right triangles and trig ratios</div>
         </div>
         <ul class="checklist" id="list-w10b">
           <li><input type="checkbox" data-week="w10"> <span>Trigonometric ratios: SOH CAH TOA</span></li>
-          <li><input type="checkbox" data-week="w10"> <span>The unit circle: key angles (0°, 30°, 45°, 60°, 90°)</span></li>
-          <li><input type="checkbox" data-week="w10"> <span>Sine and cosine rules</span></li>
-          <li><input type="checkbox" data-week="w10"> <span>Practical problems with heights and distances</span></li>
+          <li><input type="checkbox" data-week="w10"> <span>Finding missing sides and angles</span></li>
+          <li><input type="checkbox" data-week="w10"> <span>Special angles: 30°, 45°, 60°</span></li>
         </ul>
       </div>
-
-      <div class="milestone-box"><strong>Milepæl:</strong> Ta en prøveeksamen fra 1T på Utdanningsdirektoratets nettside. Målet er å se hva du mangler – ikke å bestå. Bruk resultatet til å avgjøre hva du gjentar i fase 3.</div>
     </div>
   </div>
-</div>
 
-<!-- FASE 3 -->
-<div class="phase">
-  <div class="phase-header">
-    <div class="phase-number" style="background: var(--phase3)">Fase 3</div>
-    <div class="phase-title">R1-kjerne — Derivasjon og innføring i kalkulus</div>
-    <div class="phase-dates">Uke 11–16 · Mai–Juni</div>
-  </div>
-  <div class="phase-desc">Mål: ikke bli sjokkert på forkurset. Du skal gjenkjenne begrepene og forstå hva de betyr – ikke mestre dem. Tresemesterordningen vil ta deg gjennom dette systematisk.</div>
-
-  <div class="phase-nav">
-    <strong>Campus:</strong> Videregående → R1 → Derivasjon &nbsp;·&nbsp;
-    <strong>Khan:</strong> Differential calculus → Precalculus
-  </div>
-
-  <!-- Uke 11 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 11</div>
-      <div class="week-title">Grenseverdier og kontinuitet</div>
+      <div class="week-title">Trigonometri: enhetssirkelen og utvidede definisjoner</div>
       <div class="week-progress" id="prog-w11">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -926,12 +911,13 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">R1 → Grenseverdier</div>
+          <div class="platform-where">1T → Trigonometri → Enhetssirkelen</div>
         </div>
         <ul class="checklist" id="list-w11">
-          <li><input type="checkbox" data-week="w11"> <span>Intuisjon: hva skjer med f(x) når x nærmer seg a?</span></li>
-          <li><input type="checkbox" data-week="w11"> <span>Lese grenseverdier fra grafer</span></li>
-          <li><input type="checkbox" data-week="w11"> <span>Kontinuitet: hva vil det si at en funksjon er kontinuerlig?</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>Enhetssirkelen: forstå at sin og cos er koordinater på sirkelen</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>Sinus og cosinus for vinkler over 90°</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>Sinussetningen: a/sin A = b/sin B</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>Cosinussetningen: c² = a² + b² – 2ab cos C</span></li>
         </ul>
       </div>
 
@@ -940,24 +926,21 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Differential calculus → Limits and continuity</div>
+          <div class="platform-where">Trigonometry → Unit circle + Law of sines/cosines</div>
         </div>
         <ul class="checklist" id="list-w11b">
-          <li><input type="checkbox" data-week="w11"> <span>Introduction to limits</span></li>
-          <li><input type="checkbox" data-week="w11"> <span>Estimating limits from graphs and tables</span></li>
-          <li><input type="checkbox" data-week="w11"> <span>Continuity: definition and intuition</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>The unit circle: sin and cos as coordinates</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>Law of sines</span></li>
+          <li><input type="checkbox" data-week="w11"> <span>Law of cosines</span></li>
         </ul>
       </div>
-
-      <div class="tip-box"><strong>Ressurs:</strong> Se 3Blue1Brown sin serie "Essence of Calculus" på YouTube. Start med episode 1 denne uken. Den gir deg en intuitiv forståelse ingen lærebok kan matche.</div>
     </div>
   </div>
 
-  <!-- Uke 12 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 12</div>
-      <div class="week-title">Derivasjon: konsept og grunnregler</div>
+      <div class="week-title">Repetisjon og prøveeksamen 1T</div>
       <div class="week-progress" id="prog-w12">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -966,13 +949,12 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">R1 → Derivasjon → Grunnregler</div>
+          <div class="platform-where">1T → Eksamenstrening</div>
         </div>
         <ul class="checklist" id="list-w12">
-          <li><input type="checkbox" data-week="w12"> <span>Den deriverte som stigningstall og endringshastighet</span></li>
-          <li><input type="checkbox" data-week="w12"> <span>Derivasjonsregler: konstant, potensregel, summer</span></li>
-          <li><input type="checkbox" data-week="w12"> <span>Derivere polynomer</span></li>
-          <li><input type="checkbox" data-week="w12"> <span>Tolke den deriverte grafisk: stigende/synkende, topp/bunn</span></li>
+          <li><input type="checkbox" data-week="w12"> <span>Bruk Campus sin eksamenstreningsfunksjon for 1T</span></li>
+          <li><input type="checkbox" data-week="w12"> <span>Identifiser de tre emnene der du scoret dårligst</span></li>
+          <li><input type="checkbox" data-week="w12"> <span>Gå tilbake og repeter de svake emnene</span></li>
         </ul>
       </div>
 
@@ -981,23 +963,32 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Differential calculus → Derivatives: definition and basic rules</div>
+          <div class="platform-where">Algebra I + II + Trig → Mastery challenges</div>
         </div>
         <ul class="checklist" id="list-w12b">
-          <li><input type="checkbox" data-week="w12"> <span>Average vs. instantaneous rate of change</span></li>
-          <li><input type="checkbox" data-week="w12"> <span>Power rule for derivatives</span></li>
-          <li><input type="checkbox" data-week="w12"> <span>Derivative as slope of tangent line</span></li>
-          <li><input type="checkbox" data-week="w12"> <span>Increasing/decreasing intervals from the derivative</span></li>
+          <li><input type="checkbox" data-week="w12"> <span>Ta mastery challenge for alle 1T-emner du har jobbet med</span></li>
+          <li><input type="checkbox" data-week="w12"> <span>Ta en prøveeksamen fra 1T på udir.no (eksamensdatabase)</span></li>
         </ul>
       </div>
+
+      <div class="milestone-box"><strong>Milepæl — 1T:</strong> Ta en prøveeksamen fra 1T på Utdanningsdirektoratets nettside. Målet er ikke å bestå – målet er å se hva du mangler. Bruk resultatet til å prioritere de siste ukene.</div>
     </div>
   </div>
+</div>
 
-  <!-- Uke 13 -->
+<!-- FASE 3 -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number" style="background: var(--phase3)">Fase 3</div>
+    <div class="phase-title">R1 — Kalkulus, vektorer og funksjonsdrøfting</div>
+    <div class="phase-dates">Uke 13–18 · Mai–Juni</div>
+  </div>
+  <div class="phase-desc">Her begynner R-matte. Seks uker gir deg tid til å faktisk forstå det grunnleggende — ikke bare gjenkjenne det. Tresemesterordningen vil gå gjennom alt dette igjen, men du vil ha et ekte forsprang.</div>
+
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 13</div>
-      <div class="week-title">Derivasjon: kjerneregel og spesielle funksjoner</div>
+      <div class="week-title">Grenseverdier og kontinuitet</div>
       <div class="week-progress" id="prog-w13">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -1006,13 +997,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">R1 → Derivasjon → Kjerneregel</div>
+          <div class="platform-where">R1 → Grenseverdier</div>
         </div>
         <ul class="checklist" id="list-w13">
-          <li><input type="checkbox" data-week="w13"> <span>Kjerneregelen: derivere sammensatte funksjoner</span></li>
-          <li><input type="checkbox" data-week="w13"> <span>Derivere trigonometriske funksjoner: sin(x) og cos(x)</span></li>
-          <li><input type="checkbox" data-week="w13"> <span>Derivere eksponentialfunksjoner: e^x</span></li>
-          <li><input type="checkbox" data-week="w13"> <span>Derivere ln(x)</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Intuisjon: hva skjer med f(x) når x nærmer seg en verdi?</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Lese grenseverdier fra grafer og tabeller</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Beregne enkle grenseverdier algebraisk</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Kontinuitet: hva betyr det at en funksjon er sammenhengende?</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Diskontinuitet: gjenkjenne brudd i en graf</span></li>
         </ul>
       </div>
 
@@ -1021,22 +1013,24 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Differential calculus → Chain rule, trig derivatives</div>
+          <div class="platform-where">Differential calculus → Limits and continuity</div>
         </div>
         <ul class="checklist" id="list-w13b">
-          <li><input type="checkbox" data-week="w13"> <span>The chain rule</span></li>
-          <li><input type="checkbox" data-week="w13"> <span>Derivatives of sin(x) and cos(x)</span></li>
-          <li><input type="checkbox" data-week="w13"> <span>Derivative of e^x and ln(x)</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Introduction to limits</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Estimating limits from graphs and tables</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Properties of limits</span></li>
+          <li><input type="checkbox" data-week="w13"> <span>Continuity: definition and intuition</span></li>
         </ul>
       </div>
+
+      <div class="tip-box"><strong>Ressurs:</strong> Se 3Blue1Brown "Essence of Calculus" episode 1 på YouTube denne uken. Den beste introduksjonen til kalkulus som finnes, helt gratis.</div>
     </div>
   </div>
 
-  <!-- Uke 14 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 14</div>
-      <div class="week-title">Funksjonsdrøfting og optimalisering</div>
+      <div class="week-title">Derivasjon: konsept og grunnregler</div>
       <div class="week-progress" id="prog-w14">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -1045,13 +1039,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">R1 → Funksjonsdrøfting</div>
+          <div class="platform-where">R1 → Derivasjon → Grunnregler</div>
         </div>
         <ul class="checklist" id="list-w14">
-          <li><input type="checkbox" data-week="w14"> <span>Finne topp- og bunnpunkter med den deriverte</span></li>
-          <li><input type="checkbox" data-week="w14"> <span>Stigende og synkende intervaller</span></li>
-          <li><input type="checkbox" data-week="w14"> <span>Optimalisering: maks/min fra tekstoppgaver</span></li>
-          <li><input type="checkbox" data-week="w14"> <span>Tegne grafer ved hjelp av derivasjon</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Den deriverte som stigningstall i et punkt og som endringshastighet</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Definisjonen via grenseverdi: f'(x) = lim [f(x+h)–f(x)]/h</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Potensregelen: (x^n)' = nx^(n-1)</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Derivere summer, differanser og polynomer</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Tolke grafisk: f'(x) > 0 stigende, f'(x) < 0 synkende, f'(x) = 0 toppunkt/bunnpunkt</span></li>
         </ul>
       </div>
 
@@ -1060,22 +1055,23 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Differential calculus → Analyzing functions</div>
+          <div class="platform-where">Differential calculus → Derivatives: definition and basic rules</div>
         </div>
         <ul class="checklist" id="list-w14b">
-          <li><input type="checkbox" data-week="w14"> <span>Critical points: local minima and maxima</span></li>
-          <li><input type="checkbox" data-week="w14"> <span>Optimization problems</span></li>
-          <li><input type="checkbox" data-week="w14"> <span>Concavity and the second derivative</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Derivative as slope of tangent line</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Formal definition of derivative as a limit</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Power rule for derivatives</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Derivatives of polynomials</span></li>
+          <li><input type="checkbox" data-week="w14"> <span>Increasing and decreasing intervals from f'(x)</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 15 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 15</div>
-      <div class="week-title">Introduksjon til integral</div>
+      <div class="week-title">Derivasjon: kjerneregel og spesielle funksjoner</div>
       <div class="week-progress" id="prog-w15">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -1084,13 +1080,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">R1 → Integrasjon (introduksjon)</div>
+          <div class="platform-where">R1 → Derivasjon → Kjerneregel og sammensatte funksjoner</div>
         </div>
         <ul class="checklist" id="list-w15">
-          <li><input type="checkbox" data-week="w15"> <span>Hva er et integral? Intuisjon som areal under kurve</span></li>
-          <li><input type="checkbox" data-week="w15"> <span>Ubestemte integraler og antiderivasjon</span></li>
-          <li><input type="checkbox" data-week="w15"> <span>Integrasjonsregler for polynomer</span></li>
-          <li><input type="checkbox" data-week="w15"> <span>Bestemte integraler: beregne areal mellom graf og x-akse</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Kjerneregelen: derivere f(g(x)) — den ytre ganger den indre deriverte</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Produktregelen: (f·g)' = f'g + fg'</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Derivere sin(x) og cos(x)</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Derivere e^x og ln(x)</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Kombinere reglene: derivere sammensatte uttrykk</span></li>
         </ul>
       </div>
 
@@ -1099,23 +1096,22 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Integral calculus → Integrals</div>
+          <div class="platform-where">Differential calculus → Chain rule + Product rule</div>
         </div>
         <ul class="checklist" id="list-w15b">
-          <li><input type="checkbox" data-week="w15"> <span>Introduction to integration</span></li>
-          <li><input type="checkbox" data-week="w15"> <span>Indefinite integrals: power rule</span></li>
-          <li><input type="checkbox" data-week="w15"> <span>Definite integrals: area under a curve</span></li>
-          <li><input type="checkbox" data-week="w15"> <span>Fundamental theorem of calculus (konsept)</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>The chain rule</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>The product rule</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Derivatives of sin(x), cos(x), e^x, ln(x)</span></li>
+          <li><input type="checkbox" data-week="w15"> <span>Combining differentiation rules</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 16 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 16</div>
-      <div class="week-title">Vektorer — introduksjon</div>
+      <div class="week-title">Funksjonsdrøfting og optimalisering</div>
       <div class="week-progress" id="prog-w16">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -1124,13 +1120,14 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">R1 → Vektorer</div>
+          <div class="platform-where">R1 → Derivasjon → Funksjonsdrøfting</div>
         </div>
         <ul class="checklist" id="list-w16">
-          <li><input type="checkbox" data-week="w16"> <span>Hva er en vektor? Representasjon i planet</span></li>
-          <li><input type="checkbox" data-week="w16"> <span>Addisjon og subtraksjon av vektorer</span></li>
-          <li><input type="checkbox" data-week="w16"> <span>Skalarmultiplikasjon</span></li>
-          <li><input type="checkbox" data-week="w16"> <span>Prikkprodukt og vinkel mellom vektorer</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Finne stasjonære punkter: sette f'(x) = 0 og løse</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Fortegnsskjema for f'(x): avgjøre om punktet er topp, bunn eller terrassepunkt</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Andrederiverte: f''(x) og konkavitet</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Tegne grafen til f(x) basert på derivasjonsanalyse</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Optimaliseringsoppgaver: finne maks/min fra tekstoppgaver</span></li>
         </ul>
       </div>
 
@@ -1139,34 +1136,22 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Precalculus → Vectors</div>
+          <div class="platform-where">Differential calculus → Analyzing functions</div>
         </div>
         <ul class="checklist" id="list-w16b">
-          <li><input type="checkbox" data-week="w16"> <span>Vectors: magnitude and direction</span></li>
-          <li><input type="checkbox" data-week="w16"> <span>Adding and subtracting vectors</span></li>
-          <li><input type="checkbox" data-week="w16"> <span>Dot product</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Critical points: local minima and maxima</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Second derivative test for concavity</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Sketching curves using derivatives</span></li>
+          <li><input type="checkbox" data-week="w16"> <span>Optimization problems</span></li>
         </ul>
       </div>
-
-      <div class="milestone-box"><strong>Milepæl:</strong> Ta en prøveeksamen fra R1 på Utdanningsdirektoratets nettside. Forvent at det er vanskelig – det er hele poenget. Bruk resultatet til å prioritere repetisjon.</div>
     </div>
   </div>
-</div>
 
-<!-- FASE 4 -->
-<div class="phase">
-  <div class="phase-header">
-    <div class="phase-number" style="background: var(--phase4)">Fase 4</div>
-    <div class="phase-title">Forkursforberedelse — Samle alt</div>
-    <div class="phase-dates">Uke 17–18 · Juni</div>
-  </div>
-  <div class="phase-desc">Ingen ny teori. Tett hull og bygg trygghet. Det du husker nå, tar du med deg inn i august.</div>
-
-  <!-- Uke 17 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 17</div>
-      <div class="week-title">Identifiser og reparer svake punkter</div>
+      <div class="week-title">Vektorer</div>
       <div class="week-progress" id="prog-w17">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -1175,12 +1160,15 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
-          <div class="platform-nav">Bruk Campus' testfunksjon til å identifisere hull</div>
+          <div class="platform-where">R1 → Vektorer</div>
         </div>
         <ul class="checklist" id="list-w17">
-          <li><input type="checkbox" data-week="w17"> <span>Repeter de 3 emnene du scoret dårligst på gjennom hele planen</span></li>
-          <li><input type="checkbox" data-week="w17"> <span>Gjør minimum 20 oppgaver per svakt emne</span></li>
-          <li><input type="checkbox" data-week="w17"> <span>Bruk Campus' forkursseksjon hvis tilgjengelig</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Vektorer i planet: representasjon som pil og koordinater</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Addisjon, subtraksjon og skalarmultiplikasjon</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Lengden av en vektor: |v| = √(x² + y²)</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Prikkprodukt: a · b = |a||b|cos θ</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Vinkel mellom to vektorer</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Parallelle og ortogonale vektorer</span></li>
         </ul>
       </div>
 
@@ -1189,22 +1177,22 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
-          <div class="platform-nav">Mastery challenges for alle tidligere emner</div>
+          <div class="platform-where">Precalculus → Vectors</div>
         </div>
         <ul class="checklist" id="list-w17b">
-          <li><input type="checkbox" data-week="w17"> <span>Ta Khan Academys mastery challenges for Algebra I og II</span></li>
-          <li><input type="checkbox" data-week="w17"> <span>Ta prøveeksamen 1T del 1 (uten hjelpemidler)</span></li>
-          <li><input type="checkbox" data-week="w17"> <span>Repeter blandede oppgaver på tvers av alle faser</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Vectors: magnitude and direction</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Adding and subtracting vectors</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Dot product and angle between vectors</span></li>
+          <li><input type="checkbox" data-week="w17"> <span>Parallel and perpendicular vectors</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Uke 18 -->
   <div class="week">
     <div class="week-header" onclick="toggleWeek(this)">
       <div class="week-label">Uke 18</div>
-      <div class="week-title">Siste gjennomkjøring</div>
+      <div class="week-title">Integral: ubestemt og bestemt</div>
       <div class="week-progress" id="prog-w18">–</div>
       <div class="week-toggle">▾</div>
     </div>
@@ -1213,10 +1201,101 @@
       <div class="platform-section">
         <div class="platform-header">
           <div class="platform-badge badge-campus">Campus Inkrement</div>
+          <div class="platform-where">R1 → Integrasjon</div>
         </div>
         <ul class="checklist" id="list-w18">
-          <li><input type="checkbox" data-week="w18"> <span>Ta en fullstendig prøveeksamen under eksamenslignende forhold</span></li>
-          <li><input type="checkbox" data-week="w18"> <span>Skriv ned de 10 formlene du alltid glemmer – heng dem opp</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Integral som areal under kurve — intuisjonen bak Riemann-summer</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Ubestemt integral: antiderivasjon med integrasjonskonstant C</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Integrasjonsregler: potensregelen baklengs, konstanter, summer</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Bestemt integral: ∫[a,b] f(x)dx — beregne areal mellom graf og x-akse</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Analysens fundamentalteorem: sammenhengen mellom derivasjon og integrasjon</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Areal mellom to kurver</span></li>
+        </ul>
+      </div>
+
+      <hr class="divider">
+
+      <div class="platform-section">
+        <div class="platform-header">
+          <div class="platform-badge badge-khan">Khan Academy</div>
+          <div class="platform-where">Integral calculus → Integrals</div>
+        </div>
+        <ul class="checklist" id="list-w18b">
+          <li><input type="checkbox" data-week="w18"> <span>Introduction to integration and Riemann sums</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Indefinite integrals: power rule</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Definite integrals: area under a curve</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Fundamental theorem of calculus</span></li>
+          <li><input type="checkbox" data-week="w18"> <span>Area between two curves</span></li>
+        </ul>
+      </div>
+
+      <div class="tip-box"><strong>Ressurs:</strong> Se 3Blue1Brown "Essence of Calculus" episode 8 om integraler. Forstår du den sammenhengen mellom derivasjon og integrasjon intuitivt, er du godt forberedt.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FASE 4 -->
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-number" style="background: var(--phase4)">Fase 4</div>
+    <div class="phase-title">Konsolidering og forkursforberedelse</div>
+    <div class="phase-dates">Uke 19–20 · Juni</div>
+  </div>
+  <div class="phase-desc">Ingen ny teori. Tett hull, bygg trygghet og gjør deg klar mentalt. Det du husker nå er det du tar med deg inn i august.</div>
+
+  <div class="week">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="week-label">Uke 19</div>
+      <div class="week-title">Hull-tetting basert på egne svakheter</div>
+      <div class="week-progress" id="prog-w19">–</div>
+      <div class="week-toggle">▾</div>
+    </div>
+    <div class="week-body">
+
+      <div class="platform-section">
+        <div class="platform-header">
+          <div class="platform-badge badge-campus">Campus Inkrement</div>
+          <div class="platform-where">1T + R1 → de kapitlene der du scorer lavest</div>
+        </div>
+        <ul class="checklist" id="list-w19">
+          <li><input type="checkbox" data-week="w19"> <span>Identifiser de 3 svakeste emnene basert på egne erfaringer gjennom planen</span></li>
+          <li><input type="checkbox" data-week="w19"> <span>Gjør minimum 20 oppgaver per svakt emne</span></li>
+          <li><input type="checkbox" data-week="w19"> <span>Bruk Campus sin eksamenstreningsfunksjon for 1T én gang til</span></li>
+        </ul>
+      </div>
+
+      <hr class="divider">
+
+      <div class="platform-section">
+        <div class="platform-header">
+          <div class="platform-badge badge-khan">Khan Academy</div>
+          <div class="platform-where">Mastery challenges — alle emner fra fase 1–3</div>
+        </div>
+        <ul class="checklist" id="list-w19b">
+          <li><input type="checkbox" data-week="w19"> <span>Ta mastery challenges for Algebra I, II og Trigonometry</span></li>
+          <li><input type="checkbox" data-week="w19"> <span>Ta en prøveeksamen 1T del 1 uten hjelpemidler</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="week">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="week-label">Uke 20</div>
+      <div class="week-title">Siste gjennomkjøring</div>
+      <div class="week-progress" id="prog-w20">–</div>
+      <div class="week-toggle">▾</div>
+    </div>
+    <div class="week-body">
+
+      <div class="platform-section">
+        <div class="platform-header">
+          <div class="platform-badge badge-campus">Campus Inkrement</div>
+        </div>
+        <ul class="checklist" id="list-w20">
+          <li><input type="checkbox" data-week="w20"> <span>Ta en fullstendig prøveeksamen under eksamenslignende forhold (tidspress, ingen forstyrrelser)</span></li>
+          <li><input type="checkbox" data-week="w20"> <span>Skriv ned de 10 formlene du alltid glemmer og heng dem opp</span></li>
+          <li><input type="checkbox" data-week="w20"> <span>Les om tresemesterordningens struktur på OsloMets nettside</span></li>
         </ul>
       </div>
 
@@ -1226,21 +1305,20 @@
         <div class="platform-header">
           <div class="platform-badge badge-khan">Khan Academy</div>
         </div>
-        <ul class="checklist" id="list-w18b">
-          <li><input type="checkbox" data-week="w18"> <span>Ta en fullstendig blandet testøkt på tvers av alle emner</span></li>
-          <li><input type="checkbox" data-week="w18"> <span>Les om tresemesterordningens struktur og forventninger på OsloMets nettside</span></li>
-          <li><input type="checkbox" data-week="w18"> <span>Bekreft til deg selv: målet var alltid å være klar til å lære – ikke å kunne alt</span></li>
+        <ul class="checklist" id="list-w20b">
+          <li><input type="checkbox" data-week="w20"> <span>Ta en blandet testøkt på tvers av alle emner</span></li>
+          <li><input type="checkbox" data-week="w20"> <span>Bekreft til deg selv: alle i tresemesterordningen starter med hull — det er hele poenget med ordningen</span></li>
         </ul>
       </div>
 
-      <div class="tip-box"><strong>Husk:</strong> Alle i tresemesterordningen starter med mangler. Det er hele poenget med ordningen. Det du har gjort disse 18 ukene er å gi deg selv et reelt forsprang.</div>
+      <div class="tip-box"><strong>Husk:</strong> Du har brukt 20 uker og rundt 100 timer på matte. Det er mer enn de fleste elever bruker på et helt skoleår. Gå inn i august med den selvtilliten det fortjener.</div>
     </div>
   </div>
 </div>
 
 <div class="final-note">
   <h3>En time om dagen. Ikke mer.</h3>
-  Konsistens slår intensitet i matematikk. Én time daglig, fem dager i uken, gjennom 18 uker er 90 timer med aktiv matematikklæring. Det er mer enn de fleste elever bruker på et helt skoleår med matte. Gjør det til en vane, ikke en prestasjon.
+  Konsistens slår intensitet i matematikk. Én time daglig på hverdager, over 20 uker, er rundt 100 timer med aktiv læring. Gjør det til en vane — ikke en prestasjon.
 </div>
 
 </main>
@@ -1259,7 +1337,7 @@
     document.getElementById('globalProgress').style.width = pct + '%';
     document.getElementById('progressLabel').textContent = checked.length + ' av ' + allBoxes.length + ' emner fullført';
 
-    const weeks = ['w1','w2','w3','w4','w5','w6','w7','w8','w9','w10','w11','w12','w13','w14','w15','w16','w17','w18'];
+    const weeks = ['w1','w2','w3','w4','w5','w6','w7','w8','w9','w10','w11','w12','w13','w14','w15','w16','w17','w18','w19','w20'];
     weeks.forEach(w => {
       const total = document.querySelectorAll(`[data-week="${w}"]`).length;
       const done = document.querySelectorAll(`[data-week="${w}"]:checked`).length;
